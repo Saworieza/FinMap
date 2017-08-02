@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="author">
+  <title>FinData :: Reporting System</title>
+
+
+<!--  GoogleMaps -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWfdB--7vO1ttpHcFVk5jP1GpWnsdO4R0&libraries=visualization"></script>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="node_modules/heatmap.js/build/heatmap.min.js"></script>
+  <script src="node_modules/heatmap.js/plugins/leaflet-heatmap/leaflet-heatmap.js"></script> -->
+  <script src="js/population_data.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+
+  <style media="" type="text/css">
+  /*body { margin: 0; padding: 0; }*/
+  html, body, #map {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+  }
+  </style>
+
+
+
+  <link href="css/style.css" rel="stylesheet"><!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet"><!-- Custom CSS -->
+  <link href="css/maps.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+
+  <style>
+    body {
+        padding-top: 70px;
+    }
+  </style>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link class="favicon" href="images/logo.png" rel="shortcut icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span>
+        </button> 
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png">
+          <h2>FinData <span>Open access data for financial inclusion</span></h2>
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+
+            <a href="login.html"><img class="adminlogin" src="images/adminlogin.png">
+            Admin Login</a>
+          </li>
+        </ul>
+      </div> --><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav><!-- Page Content -->
+  <div class="container nav-2">
+    <ul class="nav nav-pills ">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </li>
+        <li><a href="#">HeatMap - Bank Branch</a></li>
+        <li><a href="#">Bank Branches per 10k Population</a></li>
+        <li><a href="#">Population within 5km of a bank branch</a></li>
+        <li><a href="#">Data Sources</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <main role="main">
+      <div class="container map">
+        <div class="row">
+          <div class="col-lg-9 map-region">
+            <div id="map"></div>
+          </div>
+          <div class="col-lg-3 map-legend">
+            <div class="legend-overflow">
+              <div class="map-legend-body">
+                <div class="legend">
+                  <h3>financial access point class 
+                    <i class="fa fa-bullseye" data-toggle="tooltip" title="Auto Style"></i> 
+                    <i class="fa fa-ellipsis-v pull-right"></i>
+                  </h3>
+                  <h5>all selected</h5>
+                  <div class="indicators">
+                      <h5>Mobile Money <span class="pull-right">66k</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span class="sr-only">100% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>Bank Services <span class="pull-right">13k</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 48%">
+                        <span class="sr-only">48% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>SACCO <span class="pull-right">744</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+                        <span class="sr-only">28% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>Microfinance <span class="pull-right">467</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 18%">
+                        <span class="sr-only">18% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="map-legend-body">
+                <div class="legend">
+                  <h3>financial access point class 
+                    <i class="fa fa-bullseye" data-toggle="tooltip" title="Auto Style"></i> 
+                    <i class="fa fa-ellipsis-v pull-right"></i>
+                  </h3>
+                  <h5>all selected</h5>
+                  <div class="indicators">
+                      <h5>Mobile Money <span class="pull-right">66k</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span class="sr-only">100% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>Bank Services <span class="pull-right">13k</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 48%">
+                        <span class="sr-only">48% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>SACCO <span class="pull-right">744</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+                        <span class="sr-only">28% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>Microfinance <span class="pull-right">467</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 18%">
+                        <span class="sr-only">18% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="map-legend-body">
+                <div class="legend">
+                  <h3>financial access point class 
+                    <i class="fa fa-bullseye" data-toggle="tooltip" title="Auto Style"></i> 
+                    <i class="fa fa-ellipsis-v pull-right"></i>
+                  </h3>
+                  <h5>all selected</h5>
+                  <div class="indicators">
+                      <h5>Mobile Money <span class="pull-right">66k</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span class="sr-only">100% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>Bank Services <span class="pull-right">13k</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 48%">
+                        <span class="sr-only">48% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>SACCO <span class="pull-right">744</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+                        <span class="sr-only">28% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>Microfinance <span class="pull-right">467</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 18%">
+                        <span class="sr-only">18% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="map-legend-body">
+                <div class="legend">
+                  <h3>financial access point class 
+                    <i class="fa fa-bullseye" data-toggle="tooltip" title="Auto Style"></i> 
+                    <i class="fa fa-ellipsis-v pull-right"></i>
+                  </h3>
+                  <h5>all selected</h5>
+                  <div class="indicators">
+                      <h5>Mobile Money <span class="pull-right">66k</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span class="sr-only">100% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>Bank Services <span class="pull-right">13k</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 48%">
+                        <span class="sr-only">48% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>SACCO <span class="pull-right">744</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+                        <span class="sr-only">28% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="indicators">
+                      <h5>Microfinance <span class="pull-right">467</span></h5>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 18%">
+                        <span class="sr-only">18% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main><!-- /.container -->
+  </div>
+
+   <script>
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: new google.maps.LatLng(-0.68333, 37.8166700),
+      zoom: 7
+    });
+
+    // map.addListener('center_changed', function(e) { console.log(e); });
+
+    // Create heatmaps for each county
+    var countyData = {};
+    populationDensity.forEach(function(e) {
+      var key = e.county.trim().toLowerCase();
+      if (!(key in countyData)) countyData[key] = new Array();
+
+      var copy = Object.assign({}, e);
+      delete copy.county;
+      copy.value = parseFloat(e.value);
+      countyData[key].push(copy);
+    });
+
+    var overlayMaps = {};
+    var heatmapData = new Array();
+    Object.keys(countyData).forEach(function(k){
+      // var layer = new HeatmapOverlay(cfg),
+      let values = countyData[k];
+
+      // Get the max value for the current county
+      let max = values.map(function(e){ return e.value; }).reduce(function(a,b) { return Math.max(a, b); });
+
+      // Sort the values for each county
+
+      // Generate the heatmap data
+      heatmapData = heatmapData.concat(values.map(function(e){ return { location: new google.maps.LatLng(e.lat, e.lng), weight: e.value/max }; }));
+    });
+
+    var heatmap = new google.maps.visualization.HeatmapLayer({ data: heatmapData, radius: 15, opacity: 0.75 });
+    heatmap.setMap(map);
+  </script>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a href="index.html"><img src="images/logo.png">FinData</a>
+          <p class="copyright">&copy; 2017 FSD Kenya</p>
+        </div>
+        <div class="col-md-4 mid-column">
+          <p><a href="terms.html">Terms &amp; Conditions</a></p>
+          <p><a href="privacy.html">Privacy Policy</a></p>
+          <p><a href="contact.html"> Contact Us</a></p>
+        </div>
+        <div class="col-md-4">
+          <p>Follow Us</p>
+          <ul class="fsd-shared-footer__icons">
+            <li class="fsd-shared-footer__icon">
+              <a class="fsd-shared-footer__icon-link fsd-shared-footer__facebook" href="http://www.fb.com" target="_blank" alt="Facebook">Facebook</a>
+            </li>
+            <li class="fsd-shared-footer__icon">
+              <a href="http://twitter.com" class="fsd-shared-footer__icon-link fsd-shared-footer__twitter" target="_blank" alt="Twitter">Twitter</a>
+            </li>
+            <li class="fsd-shared-footer__icon">
+              <a href="http://www.youtube.com" class="fsd-shared-footer__icon-link fsd-shared-footer__youtube" target="_blank" alt="YouTube">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery Version 1.11.1 -->
+  <script src="js/jquery.js"></script> <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/highcharts.js"></script>
+  <script src="js/exporting.js"></script>
+  <script src="js/temperatures.js"></script>
+
+</body>
+</html>
+<!-- https://sites.google.com/site/financialaccessmapskenya/point-map---satellite -->

@@ -1,0 +1,16 @@
+@import 'https://code.highcharts.com/css/highcharts.css';
+.highcharts-title {
+    fill: #434348;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    font-size: 3em;
+}
+.highcharts-subtitle {
+    font-family: 'Courier New', monospace;
+    font-style: italic;
+    fill: #7cb5ec;
+}
+.demo-charts{
+	border-radius: 5px;
+	border:thin solid red;
+}

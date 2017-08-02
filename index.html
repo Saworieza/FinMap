@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="author">
+  <title>FinData :: Reporting System</title>
+  <link href="css/style.css" rel="stylesheet"><!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet"><!-- Custom CSS -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+
+  <style>
+    body {
+        padding-top: 70px;
+    }
+  </style>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link class="favicon" href="images/logo.png" rel="shortcut icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span>
+        </button> 
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png">
+          <h2>FinData <span>Open access data for financial inclusion</span></h2>
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+
+            <a href="login.html"><img class="adminlogin" src="images/adminlogin.png">
+            Admin Login</a>
+          </li>
+        </ul>
+      </div> --><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav><!-- Page Content -->
+  <main role="main">
+    <div class="container">
+      <div class="home-jumbotron">
+        <div class="row home-jumbotron-row">
+          <div class="col-md-7">
+            <p><span>Find, visualize, compare</span> and <span>share</span>
+            indicators related for financial sector development and inclusion
+            in Kenya</p>
+            <div>
+              <form action="/searchresults/" class="home-jumbotron-search-form">
+              <div class="home-jumbotron-search-item">
+                <label class="home-jumbotron-search-label" for=
+                "livesearch">Search</label>
+              </div>
+              <div class="home-jumbotron-search-item">
+                <input class="home-jumbotron-search-field livesearch" id=
+                "livesearch" placeholder=
+                "Search Data: e.g Banking, Mobile money" type="search">
+              </div>
+              <!-- <div class="home-jumbotron-search-item">
+                <button class="home-jumbotron-btn-search" type=
+                "submit"><i class="glyphicon glyphicon-search"></i>
+                <span class="accessible-hide">Search</span></button>
+              </div> -->
+            </form>
+            </div>
+          </div>
+          <div class="col-md-4 col-offset-1 home-jumbotron-browse">
+            <p class="home-jumbotron-browse-by"><span>Browse by</span></p>
+            <div class="jumbotron-browse-by">
+              <div class="dropdown btn-group">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Category <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <div class="row">
+                    <div class="dropdowm-header">
+                      <h2 class="x-title">
+                        <i class="fa fa-location-arrow"> Indicators By categories</i>
+                      </h2>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Supply Side
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Demand Side
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Macroeconomic
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Geospatial
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown btn-group">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Location <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <div class="row">
+                    <div class="dropdowm-header">
+                      <h2 class="x-title">
+                        <i class="fa fa-location-arrow"> Indicators By Location</i>
+                      </h2>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Supply Side
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Demand Side
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Macroeconomic
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Geospatial
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown btn-group">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Service Provider <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <div class="row">
+                    <div class="dropdowm-header">
+                      <h2 class="x-title">
+                        <i class="fa fa-location-arrow"> Indicators By Sevice Providers</i>
+                      </h2>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Supply Side
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Demand Side
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Macroeconomic
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Geospatial
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown btn-group">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Institution <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <div class="row">
+                    <div class="dropdowm-header">
+                      <h2 class="x-title">
+                        <i class="fa fa-location-arrow"> Indicators By Instituion</i>
+                      </h2>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Supply Side
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Demand Side
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Macroeconomic
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Geospatial
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown btn-group">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Demographic <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <div class="row">
+                    <div class="dropdowm-header">
+                      <h2 class="x-title">
+                        <i class="fa fa-location-arrow"> Indicators By Demographics</i>
+                      </h2>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Supply Side
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Demand Side
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Macroeconomic
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-group">
+                      <h4 class="x-sub-title">
+                        Geospatial
+                      </h4>
+                      <div class="row">
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <p>
+                            <a href="/">Balance of payments: Exports, imports, remittances</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown btn-group">
+                <a href="" class="all-indics">All Indicators</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="c-titles">
+          <h2 class="c-titles-heading">Communications</h2>
+        </div>
+        <div class="charts">
+          <div class="featured-charts">
+            <h3 class="line-top">RBA Report on Benefits paid out, contributions and total assets under individual retirement schemes </h3>
+            <p>This reports show the monetary benefits received by retired workers who have paid in to the Social Security system during their working years, amount paid by a member to a pension scheme over some period, and total assets under individual retirement schemes from RBA from the year 2010 to 2015 </p>
+          </div>
+          <div class="featured-chart">
+            <div class="extra-chart-data"><small>Units: None</small>
+              <div class="data-source"><i>Source: http://www.rba.go.ke/index.php/en/statistics/col-550/annual-reports</i></div>
+            </div>
+            <div id="temperatures" style="min-width: 310px; height: 400px; margin: 0 auto">
+              <!-- <img class="lazy img-thumbnail" data-original="https://assets.highcharts.com/images/demo-thumbnails/highcharts/area-basic-default.svg" alt="Basic area" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/area-basic-default.svg" style=""> -->
+            </div>
+          </div>
+        </div>
+        <div class="other-charts">
+          <div class="c-titles">
+            <h2 class="c-titles-heading">Other Featured charts</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 demo">
+              <a href="/demo/line-basic">
+                <div class="demo-container">
+                  <div class="image-container">
+                    <img class="lazy img-thumbnail" data-original="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.svg" alt="Basic line" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.svg" style="">
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 demo">
+              <a href="/demo/spline-symbols">
+                <div class="demo-container">
+                  <div class="image-container">
+                    <img class="lazy img-thumbnail" data-original="https://assets.highcharts.com/images/demo-thumbnails/highcharts/spline-symbols-default.png" alt="Spline with symbols" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/spline-symbols-default.png" style="">
+                  </div>
+                  <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-container"><h3>Spline with symbols</h3></div> -->
+                  <div class="clearfix"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="col-lg-4 col-offset-1">
+        <div class="c-titles">
+          <h2 class="c-titles-heading">
+          <i class="fa fa-bar-chart-o"></i>
+          Top Indicators</h2>
+        </div>
+        <section class="home-news">
+          <div class="item no-icon">
+            <p>Financial service access &amp; uptake</p>
+            <h3 class="item-title">
+              <img class="indicator-img" src="images/chart.jpg">
+              <a href="indicator.html">Loans, current usage, 18 to 25 years</a>
+            </h3>
+          </div>
+          
+          <div class="item no-icon">
+            <p>Banking Sector</p>
+            <h3 class="item-title">
+              <img class="indicator-img" src="images/chart.jpg">
+              <a href="indicator.html">Bank branches, Kakamega county</a>
+            </h3>
+          </div>
+          
+          <div class="item no-icon">
+            <p>Banking Sector</p>
+            <h3 class="item-title">
+              <img class="indicator-img" src="images/chart.jpg">
+              <a href="indicator.html">Bank branches, Bungoma county</a>
+            </h3>
+          </div>
+          
+          <div class="item no-icon">
+            <p>Financial service access &amp; uptake</p>
+            <h3 class="item-title">
+              <img class="indicator-img" src="images/chart.jpg">
+              <a href="indicator.html">Savings, current usage, 35 to 45 years</a>
+            </h3>
+          </div>
+          
+          <div class="item no-icon">
+            <p>Mobile Money</p>
+            <h3 class="item-title">
+              <img class="indicator-img" src="images/chart.jpg">
+              <a href="indicator.html">YU mobile money agents, number</a>
+            </h3>
+          </div>
+          <!-- max out at 5, the rest create for them a page -->
+          <!-- <div class="item no-icon">
+            <h3 class="item-title"><a href="/">Financial service access &amp; uptake</a></h3>
+            <p>Pensions, current usage, farmers</p>
+          </div>
+          <div class="item no-icon">
+            <h3 class="item-title"><a href="/">Mobile Money</a></h3>
+            <p>Total Money P2P Transfers, value</p>
+          </div> -->
+        </section>
+        <div class="c-titles">
+          <h2 class="c-titles-heading">
+          <i class="fa fa-line-chart"></i>
+          Latest Published Reports</h2>
+        </div>
+        <section class="home-news">
+          <div class="item no-icon">
+            <!-- <h3 class="item-title"><a href="/">Financial service access &amp; uptake</a></h3> -->
+            <a href="">RBA Report on Benefits paid out, contributions and total assets under individual retirement schemes</a>
+          </div>
+          <div class="item no-icon">
+            <!-- <h3 class="item-title"><a href="/">Banking Sector</a></h3> -->
+            <a href="">Testing</a>
+          </div>
+          <div class="item no-icon">
+            <!-- <h3 class="item-title"><a href="/">Banking Sector</a></h3> -->
+            <a href="">Some Incomplete Report highlighting Things</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main><!-- /.container -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a href="index.html"><img src="images/logo.png">FinData</a>
+          <p class="copyright">&copy; 2017 FSD Kenya</p>
+        </div>
+        <div class="col-md-4 mid-column">
+          <p><a href="terms.html">Terms &amp; Conditions</a></p>
+          <p><a href="privacy.html">Privacy Policy</a></p>
+          <p><a href="contact.html"> Contact Us</a></p>
+        </div>
+        <div class="col-md-4">
+          <p>Follow Us</p>
+          <ul class="fsd-shared-footer__icons">
+            <li class="fsd-shared-footer__icon">
+              <a class="fsd-shared-footer__icon-link fsd-shared-footer__facebook" href="http://www.fb.com" target="_blank" alt="Facebook">Facebook</a>
+            </li>
+            <li class="fsd-shared-footer__icon">
+              <a href="http://twitter.com" class="fsd-shared-footer__icon-link fsd-shared-footer__twitter" target="_blank" alt="Twitter">Twitter</a>
+            </li>
+            <li class="fsd-shared-footer__icon">
+              <a href="http://www.youtube.com" class="fsd-shared-footer__icon-link fsd-shared-footer__youtube" target="_blank" alt="YouTube">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery Version 1.11.1 -->
+  <script src="js/jquery.js"></script> <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/highcharts.js"></script>
+  <script src="js/exporting.js"></script>
+  <script src="js/temperatures.js"></script>
+
+</body>
+</html>

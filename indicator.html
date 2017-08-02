@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="author">
+  <title>FinData :: Reporting System</title>
+  <link href="css/style.css" rel="stylesheet"><!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet"><!-- Custom CSS -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+
+  <style>
+    body {
+        padding-top: 70px;
+    }
+  </style>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link class="favicon" href="images/logo.png" rel="shortcut icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span>
+        </button> 
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png">
+          <h2>FinData <span>Open access data for financial inclusion</span></h2>
+        </a>
+      </div>
+    </div><!-- /.container -->
+  </nav><!-- Page Content -->
+  <main role="main">
+    <div class="container">
+      <!-- <div class="home-jumbotron"> -->
+        <form action="#" method="post" id="search">
+          <div>
+            <label for="name">Text Input:</label>
+            <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Search FinData..."/>
+            <input type="submit" value="Submit" />
+          </div>
+        </form>  
+      <!-- </div> -->
+      <div class="col-lg-7">
+        <div class="c-titles">
+          <h2 class="c-titles-heading">Communications</h2>
+        </div>
+        <div class="charts">
+          <div class="featured-charts">
+            <h3 class="line-top">RBA Report on Benefits paid out, contributions and total assets under individual retirement schemes </h3>
+            <p>This reports show the monetary benefits received by retired workers who have paid in to the Social Security system during their working years, amount paid by a member to a pension scheme over some period, and total assets under individual retirement schemes from RBA from the year 2010 to 2015 </p>
+          </div>
+          <div class="featured-chart">
+            <div class="extra-chart-data"><small>Units: None</small>
+              <div class="data-source"><i>Source: http://www.rba.go.ke/index.php/en/statistics/col-550/annual-reports</i></div>
+            </div>
+            <div id="temperatures" style="min-width: 310px; height: 400px; margin: 0 auto">
+              <img class="lazy img-thumbnail" data-original="https://assets.highcharts.com/images/demo-thumbnails/highcharts/area-basic-default.svg" alt="Basic area" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/area-basic-default.svg" style="">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="chart-controls-bottom row">
+            <div class="copyright-tooltip info-tooltip" tabindex="0">
+              <i class="icon-ddp-copyright"></i>
+              <p class="info-tooltip-content">©OECD<span class="separator">·</span><a href="http://www.oecd.org/termsandconditions/" target="_top">Terms &amp; Conditions</a></p>
+            </div>
+            <div class="col-lg-4">
+              <h3>Perspectives</h3>
+              <div class="dropdown single-subject-dropdown">
+                <a class="dropdown-button light" href="">Total</a>
+                <div class="dropdown-list dark accessible-hide" style="display: block;">
+                  <ul>
+                    <li>
+                      <a class="btn" data-value="TOT" href="#">Total</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dropdown measures">
+                <a class="dropdown-button light" href="">2010=100</a>
+                <div class="dropdown-list dark accessible-hide" style="display: block;">
+                  <ul>
+                    <li>
+                      <a data-value="USD" href="#">US dollars</a>
+                    </li>
+                    <li>
+                      <a data-value="IDX2010" href="#">2010=100</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 locations">
+              <h3>Countries</h3>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <h3>Time</h3>
+              <!-- <ul class="segmented-control frequencies">
+                <li class="current">
+                  <a data-value="A" href="#">yearly</a>
+                </li>
+                <li>
+                  <a class="disabled" data-value="Q" href="#">quarterly</a>
+                </li>
+                <li>
+                  <a class="disabled" data-value="M" href="#">monthly</a>
+                </li>
+              </ul> -->
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                  <input type="checkbox" checked autocomplete="off"> Check
+                </label>
+                <label class="btn btn-primary">
+                  <input type="checkbox" autocomplete="off"> Check2
+                </label>
+                <label class="btn btn-primary">
+                  <input type="checkbox" autocomplete="off"> Check3
+                </label>
+              </div>
+              <p class="use-latest-data"><label class="use-latest-data-label"><input class="use-latest-data-checkbox" type="checkbox"> <span class="use-latest-data-label-text">latest data available</span></label></p>
+              <div class="time-slider">
+                <div class="time-slider-inner noUi-target noUi-ltr noUi-horizontal noUi-background">
+                  <div class="noUi-base">
+                    <div class="noUi-origin noUi-connect noUi-dragable noUi-stacking" style="left: 67.3913%;">
+                      <div class="noUi-handle noUi-handle-lower"></div>
+                    </div>
+                    <div class="noUi-origin noUi-background" style="left: 100%;">
+                      <div class="noUi-handle noUi-handle-upper"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="time-period-navigation">
+                <div class="previous-time-period">
+                  <a href=""><i class="icon-ddp-expand-left" title="Previous time period"></i></a>
+                </div>
+                <div class="next-time-period">
+                  <a href=""><i class="icon-ddp-expand-right" title="Next time period"></i></a>
+                </div>
+                <div class="current-time-period">
+                  <span class="start">2001</span> <span class="end">2016</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box indicator-definition">
+              <h2 class="line-top">Definition of<br><span class="content">GDP per hour worked</span></h2>
+              <div class="indicator-definition-text body-text more-section">
+                <p>
+                  GDP per hour worked is a measure of labour productivity. It measures how efficiently labour input is combined with other factors of production and used in the production process. Labour input is defined as total hours worked of all persons engaged in production. Labour productivity only partially reflects the productivity of labour in terms of the personal capacities of workers or the intensity of their effort. The ratio between the output measure and the labour input depends to a large degree on the presence and/or use of other inputs (e.g. capital, intermediate inputs, technical, organisational and efficiency change, economies of scale). This indicator is measured in USD (constant prices 2010 and PPPs) and indices.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">Side B</div>
+        </div>
+      </div>
+      
+
+      <div class="col-lg-4 col-offset-1">
+        <div class="c-titles">
+          <h2 class="c-titles-heading">
+          <i class="fa fa-bar-chart-o"></i>
+          Top Indicators</h2>
+        </div>
+        <section class="home-news">
+          <div class="item no-icon">
+            <p>Financial service access &amp; uptake</p>
+            <h3 class="item-title">
+              <img class="indicator-img" src="images/chart.jpg">
+              <a href="/">Loans, current usage, 18 to 25 years</a>
+            </h3>
+          </div>
+          
+          <div class="item no-icon">
+            <p>Banking Sector</p>
+            <h3 class="item-title">
+              <img class="indicator-img" src="images/chart.jpg">
+              <a href="/">Bank branches, Kakamega county</a>
+            </h3>
+          </div>
+          
+          <div class="item no-icon">
+            <p>Banking Sector</p>
+            <h3 class="item-title">
+              <img class="indicator-img" src="images/chart.jpg">
+              <a href="/">Bank branches, Bungoma county</a>
+            </h3>
+          </div>
+          
+          <div class="item no-icon">
+            <p>Financial service access &amp; uptake</p>
+            <h3 class="item-title">
+              <img class="indicator-img" src="images/chart.jpg">
+              <a href="/">Savings, current usage, 35 to 45 years</a>
+            </h3>
+          </div>
+          
+          <div class="item no-icon">
+            <p>Mobile Money</p>
+            <h3 class="item-title">
+              <img class="indicator-img" src="images/chart.jpg">
+              <a href="/">YU mobile money agents, number</a>
+            </h3>
+          </div>
+        </section>
+        <div class="c-titles">
+          <h2 class="c-titles-heading">
+          <i class="fa fa-line-chart"></i>
+          Latest Published Reports</h2>
+        </div>
+        <section class="home-news">
+          <div class="item no-icon">
+            <a href="">RBA Report on Benefits paid out, contributions and total assets under individual retirement schemes</a>
+          </div>
+          <div class="item no-icon">
+            <a href="">Testing</a>
+          </div>
+          <div class="item no-icon">
+            <a href="">Some Incomplete Report highlighting Things</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main><!-- /.container -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a href="index.html"><img src="images/logo.png">FinData</a>
+          <p class="copyright">&copy; 2017 FSD Kenya</p>
+        </div>
+        <div class="col-md-4 mid-column">
+          <p><a href="terms.html">Terms &amp; Conditions</a></p>
+          <p><a href="privacy.html">Privacy Policy</a></p>
+          <p><a href="contact.html"> Contact Us</a></p>
+        </div>
+        <div class="col-md-4">
+          <p>Follow Us</p>
+          <ul class="fsd-shared-footer__icons">
+            <li class="fsd-shared-footer__icon">
+              <a class="fsd-shared-footer__icon-link fsd-shared-footer__facebook" href="http://www.fb.com" target="_blank" alt="Facebook">Facebook</a>
+            </li>
+            <li class="fsd-shared-footer__icon">
+              <a href="http://twitter.com" class="fsd-shared-footer__icon-link fsd-shared-footer__twitter" target="_blank" alt="Twitter">Twitter</a>
+            </li>
+            <li class="fsd-shared-footer__icon">
+              <a href="http://www.youtube.com" class="fsd-shared-footer__icon-link fsd-shared-footer__youtube" target="_blank" alt="YouTube">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery Version 1.11.1 -->
+  <script src="js/jquery.js"></script> <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+  <script src="js/highcharts.js"></script>
+  <script src="js/exporting.js"></script>
+  <script src="js/temperatures.js"></script>
+
+</body>
+</html>

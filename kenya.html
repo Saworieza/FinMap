@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <title>Kenya Population Density - County-level Heatmap</title>
+
+    <!--  GoogleMaps -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWfdB--7vO1ttpHcFVk5jP1GpWnsdO4R0&libraries=visualization"></script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="node_modules/heatmap.js/build/heatmap.min.js"></script>
+    <script src="node_modules/heatmap.js/plugins/leaflet-heatmap/leaflet-heatmap.js"></script> -->
+    <script src="js/population_data.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+
+    <style media="screen" type="text/css">
+    body { margin: 0; padding: 0; }
+    html, body, #map {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div style="width: 90%; margin: 0 auto; height: 80vh; border: thin solid red;">
+      <div id="map"></div>
+    </div>
+  </body>
+
+  <script>
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: new google.maps.LatLng(-0.68333, 37.8166700),
+      zoom: 7
+    });
+
+    // map.addListener('center_changed', function(e) { console.log(e); });
+
+    // Create heatmaps for each county
+    var countyData = {};
+    populationDensity.forEach(function(e) {
+      var key = e.county.trim().toLowerCase();
+      if (!(key in countyData)) countyData[key] = new Array();
+
+      var copy = Object.assign({}, e);
+      delete copy.county;
+      copy.value = parseFloat(e.value);
+      countyData[key].push(copy);
+    });
+
+    var overlayMaps = {};
+    var heatmapData = new Array();
+    Object.keys(countyData).forEach(function(k){
+      // var layer = new HeatmapOverlay(cfg),
+      let values = countyData[k];
+
+      // Get the max value for the current county
+      let max = values.map(function(e){ return e.value; }).reduce(function(a,b) { return Math.max(a, b); });
+
+      // Sort the values for each county
+
+      // Generate the heatmap data
+      heatmapData = heatmapData.concat(values.map(function(e){ return { location: new google.maps.LatLng(e.lat, e.lng), weight: e.value/max }; }));
+    });
+
+    var heatmap = new google.maps.visualization.HeatmapLayer({ data: heatmapData, radius: 15, opacity: 0.75 });
+    heatmap.setMap(map);
+  </script>
+</html>

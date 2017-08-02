@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="author">
+  <title>FinData :: Reporting System</title>
+  <link href="css/style.css" rel="stylesheet"><!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet"><!-- Custom CSS -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+
+  <style>
+    body {
+        /*padding-top: 70px;*/
+    }
+  </style>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link class="favicon" href="images/logo.png" rel="shortcut icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span>
+        </button> 
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png">
+          <h2>FinData <span>Open access data for financial inclusion</span></h2>
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+
+            <a href="dashboard.html"><img class="adminlogin" src="images/adminlogin.png">
+            Admin Login</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav><!-- Page Content -->
+  <main role="main">
+    <!-- <div class="container">
+      <div class="home-jumbotron">
+        <div class="row home-jumbotron-row">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </div>
+      </div>
+    </div> -->
+    <div class="container">
+      <div class="clearfix page-with-sidebar">
+        <div class="entry-sidebar">
+          <nav class="entry-toc">
+            <h3>Contents</h3>
+            <ol>
+              <li class="section active">
+                <a href="#privacy-1">This is a privacy clause</a>
+              </li>
+              <li>
+                <a href="#privacy-2">This is another Privacy Clause</a>
+              </li>
+              <li>
+                <a href="#privacy-3">Design Doesn't Change Much</a>
+                <ol>
+                  <li><a href="/">a) Unless those clauses</a></li>
+                  <li><a href="/">b) Have more</a></li>
+                  <li><a href="/">c) Little clauses, like babies</a></li>
+                </ol>
+              </li>
+            </ol>
+            </ol>
+          </nav>
+        </div>
+        <article id="post" class="post page type-page status-publish has-post-thumbnail entry">
+          <header class="entry-header">
+            <h1 class="entry-title">Privacy Clauses</h1>
+          </header>
+          <div class="entry-content">
+            <h4 id="privacy-1">
+              <a class="deep-link" href="terms">This is a Privacy Clause</a> 
+            </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h4 id="privacy-2">
+              <a class="deep-link" href="terms">This is another Privacy Clause to be followed</a> 
+            </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h4 id="privacy-3">
+              <a class="deep-link" href="terms">Yeah The Design Doesnt Change from T&Cs, at least not much</a> 
+            </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main><!-- /.container -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a href="index.html"><img src="images/logo.png">FinData</a>
+          <p class="copyright">&copy; 2017 FSD Kenya</p>
+        </div>
+        <div class="col-md-4 mid-column">
+          <p><a href="terms.html">Terms &amp; Conditions</a></p>
+          <p><a href="privacy.html">Privacy Policy</a></p>
+          <p><a href="contact.html"> Contact Us</a></p>
+        </div>
+        <div class="col-md-4">
+          <p>Follow Us</p>
+          <ul class="fsd-shared-footer__icons">
+            <li class="fsd-shared-footer__icon">
+              <a class="fsd-shared-footer__icon-link fsd-shared-footer__facebook" href="http://www.fb.com" target="_blank" alt="Facebook">Facebook</a>
+            </li>
+            <li class="fsd-shared-footer__icon">
+              <a href="http://twitter.com" class="fsd-shared-footer__icon-link fsd-shared-footer__twitter" target="_blank" alt="Twitter">Twitter</a>
+            </li>
+            <li class="fsd-shared-footer__icon">
+              <a href="http://www.youtube.com" class="fsd-shared-footer__icon-link fsd-shared-footer__youtube" target="_blank" alt="YouTube">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery Version 1.11.1 -->
+  <script src="js/jquery.js">
+  </script> <!-- Bootstrap Core JavaScript -->
+   
+  <script src="js/bootstrap.min.js">
+  </script>
+</body>
+</html>

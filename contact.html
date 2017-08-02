@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="author">
+  <title>FinData :: Reporting System</title>
+  <link href="css/style.css" rel="stylesheet"><!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet"><!-- Custom CSS -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+
+  <style>
+    body {
+        padding-top: 70px;
+    }
+  </style>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link class="favicon" href="images/logo.png" rel="shortcut icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span>
+        </button> 
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png">
+          <h2>FinData <span>Open access data for financial inclusion</span></h2>
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+
+            <a href="dashboard.html"><img class="adminlogin" src="images/adminlogin.png">
+            Admin Login</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav><!-- Page Content -->
+  <main role="main">
+    <div class="container">
+      <div class="content">
+        <!--contact-->
+        <div class="contact-w3l">
+          <div class="container">
+            <h1 class="entry-title" style="float: left; margin-left: 1.5rem;">How To Find Us</h1>
+            <div class="contact-bottom">
+            </div>
+            <div class="col-md-4 contact-left">
+              <div class="contct-info">
+                <h4> Contact Information</h4>
+                <p>We are open for business daily from 8 a.m to 4 p.m and on weekends from 8am till noon. You can contact us with any enquiries you have. The following are our contact details.</p>
+
+                <ul>
+                  <li>Phone :+254 712 345 678</li>
+                  <li>Phone :+254 020 156 738</li>
+                  <li>Phone :+254 021 345 874</li>
+                  <li><a href="mailto:info@findata.co.ke">info@findata.co.ke</a></li>
+                  <li><a href="mailto:findata@gmail.com">findata@gmail.com</a></li>           
+                </ul>
+
+              </div>
+            </div>
+            <div class="col-md-8 contact-left cont">
+              <div class="contct-info">
+                <h4>Contact Form</h4>
+                <form action="mailer.php" method="POST">
+                  <div class="row">
+                    <div class="col-md-6 row-grid">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                      <div class="col-md-6 row-grid">
+                        <input type="text" name="email" placeholder="Email address" required>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 row-grid">
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                      <div class="col-md-6 row-grid">
+                    <input type="text" name="phone" placeholder="Phone number" required>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <textarea placeholder="Message" name="message" ></textarea>
+                  <input type="submit" value="Submit" name="submit" >
+                  <input type="reset" value="Clear" >
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--contact-->
+      </div>
+    </div>
+  </main><!-- /.container -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a href="index.html"><img src="images/logo.png">FinData</a>
+          <p class="copyright">&copy; 2017 FSD Kenya</p>
+        </div>
+        <div class="col-md-4 mid-column">
+          <p><a href="terms.html">Terms &amp; Conditions</a></p>
+          <p><a href="privacy.html">Privacy Policy</a></p>
+          <p><a href="contact.html"> Contact Us</a></p>
+        </div>
+        <div class="col-md-4">
+          <p>Follow Us</p>
+          <ul class="fsd-shared-footer__icons">
+            <li class="fsd-shared-footer__icon">
+              <a class="fsd-shared-footer__icon-link fsd-shared-footer__facebook" href="http://www.fb.com" target="_blank" alt="Facebook">Facebook</a>
+            </li>
+            <li class="fsd-shared-footer__icon">
+              <a href="http://twitter.com" class="fsd-shared-footer__icon-link fsd-shared-footer__twitter" target="_blank" alt="Twitter">Twitter</a>
+            </li>
+            <li class="fsd-shared-footer__icon">
+              <a href="http://www.youtube.com" class="fsd-shared-footer__icon-link fsd-shared-footer__youtube" target="_blank" alt="YouTube">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery Version 1.11.1 -->
+  <script src="js/jquery.js">
+  </script> <!-- Bootstrap Core JavaScript -->
+   
+  <script src="js/bootstrap.min.js">
+  </script>
+</body>
+</html>
